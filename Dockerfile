@@ -2,7 +2,7 @@
 FROM ubuntu:20.04
 # We starten vanaf de bestaande “ubuntu”-image (tag: 20.04) # deze image wordt van de registry (Docker Hub) gehaald.
 RUN apt update 
-RUN apt install -y apache2
+RUN apt install -y -e TZ=UTC apache2 
 
 ENV DEBIAN_FRONTEND=noninteractive 
 # Bovenstaande lijn is nodig omdat er anders naar de timezone gevraagd wordt 
