@@ -1,4 +1,5 @@
 ### DEEL 1: instructies voor het BUILDen van de IMAGE FROM ubuntu:20.04
+FROM ubuntu:20.04
 # We starten vanaf de bestaande “ubuntu”-image (tag: 20.04) # deze image wordt van de registry (Docker Hub) gehaald.
 RUN apt update RUN apt install -y apache2
 # Bovenstaande lijn is nodig omdat er anders naar de timezone gevraagd wordt # tijdens de installatie van PHP RUN apt install -y php
