@@ -1,7 +1,8 @@
 ### DEEL 1: instructies voor het BUILDen van de IMAGE 
 FROM ubuntu:20.04
 # We starten vanaf de bestaande “ubuntu”-image (tag: 20.04) # deze image wordt van de registry (Docker Hub) gehaald.
-RUN apt update 
+RUN apt update && apt install tzdata -y
+ENV TZ="Europe/Brussels"
 RUN apt install -y apache2 
 
 ENV DEBIAN_FRONTEND=noninteractive 
